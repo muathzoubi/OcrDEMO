@@ -1,16 +1,15 @@
-import { useRef, useState } from 'react';
+import {  useState } from 'react';
 import './App.css';
 import Left from './Left';
 import Right from './Right';
 
 function App() {
-  const img = useRef<HTMLImageElement>(null);
   const [res, setRes] = useState(' ');
 
   return (
     <>
       <div className="container">
-        <Left ref={img} setRes={setRes} />
+        <Left  setRes={setRes} />
         <Right res={res} />
       </div>
     </>
